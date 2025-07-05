@@ -20,6 +20,7 @@ body {
     /* overflow: hidden; */
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
 
 header {
@@ -104,13 +105,21 @@ section {
 }
 
 .home {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: black;
+    background-color: black; */
     /* height: 70vh; */
+
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  padding: 1rem 9%;
+  /* flex-wrap: wrap; */
 }
+
 
 .home.home-content {
     font-size: 6rem;
@@ -264,9 +273,10 @@ span {
     }
 }
 
+
 @media (max-width: 1000px) {
     .home {
-        gap: 4rem;
+        flex: 4rem;
     }
 }
 
@@ -316,6 +326,7 @@ span {
     padding: 5rem 9%;
     color: white;
     text-align: center;
+    margin: -100px;
     
 }
 
@@ -465,3 +476,75 @@ span {
     display: flex;
     justify-content: space-around;
 }
+#projets h2{
+    
+    text-align: center;
+    color: #b74b4b;
+    font-size: 30px;
+
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .project-card {
+    flex: 1 1 calc(33.33% - 2rem);
+    /* background-color: #161616; */
+    padding: 2rem;
+    /* border-radius: 1rem;
+    border: 1px solid #b74b4b; */
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card h3 {
+    color: #b74b4b;
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .project-card p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-card a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #b74b4b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .project-card a:hover {
+    background-color: white;
+    color: #b74b4b;
+    border: 1px solid #b74b4b;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .project-card {
+      flex: 1 1 100%;
+    }
+  }
+  
+
+
